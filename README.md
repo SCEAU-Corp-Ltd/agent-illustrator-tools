@@ -2,16 +2,22 @@
 
 **Public repo:** [github.com/SCEAU-Corp-Ltd/agent-illustrator-tools](https://github.com/SCEAU-Corp-Ltd/agent-illustrator-tools) · open-source · safe to fork or clone.
 
-This repository explains how to use AI assistants with **Adobe Illustrator (Beta)** using Adobe's MCP connection.
+This repository explains how to use **any MCP-capable AI assistant** with **Adobe Illustrator (Beta)** — including Claude, Codex, and Cursor — using Adobe's MCP connection. You describe what you want; the AI makes the change in Illustrator.
 
-If you are **not a developer**, start here:
+![How it works](docs/images/how-it-works.svg)
 
-- `docs/non-developer-start-here.md` (plain-language guide)
-- `workflows/illustrator-recolor.md` (step-by-step recolor workflow)
+### 👉 Not a developer? Start here
 
-If you are setting up a specific AI tool, use:
+**[docs/non-developer-start-here.md](docs/non-developer-start-here.md)** — a visual,
+click-by-click setup guide. No coding. That one page gets you connected and
+making your first edit.
 
-- `docs/ai-tool-connections.md` (includes Adobe's newer "Adobe for creativity" connector path for Claude)
+After setup, the [recolor workflow](workflows/illustrator-recolor.md) is the best
+first hands-on task.
+
+### Setting up a specific AI tool?
+
+- [docs/ai-tool-connections.md](docs/ai-tool-connections.md) — per-tool notes for Claude, Codex, Cursor, and others, including Adobe's "Adobe for creativity" connector for Claude
 
 ## What This Repo Is
 
@@ -82,7 +88,7 @@ Optional **local vision** (PNG review or design QA — stays on your machine):
 
 ### Non-developers
 
-- `docs/non-developer-start-here.md` - plain-language onboarding
+- `docs/non-developer-start-here.md` - visual, click-by-click setup guide
 - `workflows/illustrator-recolor.md` - practical recolor checklist
 - `docs/public-boundary.md` - what must stay private
 
@@ -125,11 +131,12 @@ For **secrets** (MCP tokens, cloud model keys, private hostnames), use your assi
 | Path | Purpose |
 |---|---|
 | `CONTRIBUTING.md` | Public contribution rules. |
-| `docs/non-developer-start-here.md` | Plain-language onboarding for non-developers. |
+| `docs/non-developer-start-here.md` | Visual, click-by-click setup guide for designers. |
+| `docs/images/` | Diagrams used by the docs, plus a screenshot shot-list. |
 | `.env.example` | Commented optional `OLLAMA_*` defaults for `tools/ollama-vision/`. |
 | `SECURITY.md` | How to report safety or disclosure issues. |
 | `data/` | Public reference data used by the docs. |
-| `docs/ai-tool-connections.md` | Notes for Codex, Claude Code, Cursor, and other AI tools. |
+| `docs/ai-tool-connections.md` | Notes for Claude, Codex, Cursor, and other AI tools. |
 | `docs/adobe-illustrator-mcp-tools.md` | Current Illustrator MCP function snapshot. |
 | `docs/illustrator-menu-command-links.md` | Searchable Illustrator menu command value index. |
 | `docs/illustrator-claw-public-setup.md` | Generic Illustrator Claw setup guide for this repo. |
@@ -144,19 +151,11 @@ For **secrets** (MCP tokens, cloud model keys, private hostnames), use your assi
 | `workflows/ollama-qwen-gemma-vision.md` | Qwen2.5-VL / Gemma 3 vision presets and commands (optional). |
 | `workflows/mcp-listener-environment.md` | How to run and reason about the listener playground. |
 
-## Use
-
-Use this repo as a shared guide. Choose the path that matches your role:
-
-- Non-technical user: read `docs/non-developer-start-here.md`
-- Setup user: read `docs/ai-tool-connections.md`
-- Advanced user: read `docs/adobe-illustrator-mcp-tools.md`
-
 ## Scope
 
 - AI-assisted Illustrator automation
 - Adobe MCP server tools exposed by Illustrator (Beta)
-- Codex-driven tool calls and workflow orchestration
+- AI-driven tool calls and workflow orchestration (Claude, Codex, Cursor, and others)
 - Illustrator Claw-style public setup and automation patterns
 - Illustrator menu command reference data
 - Automated coloring and recoloring examples

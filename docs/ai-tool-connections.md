@@ -3,10 +3,10 @@
 Adobe documents the Illustrator MCP server as a Beta feature for connecting
 desktop AI tools to Illustrator (Beta).
 
-The public workflow in this repository uses Illustrator tools from the Adobe MCP
-server, with automation handled through Codex. Other tools can connect to the
-same Adobe MCP server concept when they support the required MCP connection
-shape.
+The workflows in this repository work with any MCP-capable AI assistant.
+Connect your assistant to the Adobe MCP server, then follow the same tool
+sequence regardless of which AI tool you use. Per-tool notes are in the table
+below.
 
 For **offline visual QA** of MCP-exported PNGs (optional), use a local Ollama vision model and `workflows/design-qa-with-ollama.md` — independent of which MCP client you use. For **Qwen2.5-VL or Gemma 3** tags and presets, see `workflows/ollama-qwen-gemma-vision.md`.
 
@@ -36,10 +36,10 @@ Practical guidance:
 
 | AI tool | Public note |
 |---|---|
+| Claude Code | Adobe documents Claude Code as a supported desktop AI tool path. Adobe's "Adobe for creativity" connector in Claude can also orchestrate vector-oriented tasks directly; ask Claude for the outcome, then finalize in Illustrator if needed. See the "Adobe for creativity in Claude" section above. |
 | Codex | Use the Adobe MCP server connection and ask Codex to adapt the workflow into Codex-compatible tool calls. |
-| Illustrator Claw | Point an Illustrator Claw workspace at this repo, configure MCP servers privately, and keep tokens out of git. Start with `docs/illustrator-claw-public-setup.md`; Codex-compatible agents can use `skills/illustrator-claw/SKILL.md` as `$illustrator-claw`. |
-| Claude Code | Adobe documents Claude Code as a supported desktop AI tool path. Adobe's newer "Adobe for creativity" connector in Claude can also orchestrate vector-oriented tasks; ask Claude for the outcome, then finalize in Illustrator if needed. |
 | Cursor | Adobe documents Cursor as a supported desktop AI tool path. Ask Cursor to adapt the workflow to its MCP settings format. |
+| Illustrator Claw | Point an Illustrator Claw workspace at this repo, configure MCP servers privately, and keep tokens out of git. Start with `docs/illustrator-claw-public-setup.md`; agents can use `skills/illustrator-claw/SKILL.md` as `$illustrator-claw`. |
 | Other tools | Use the Adobe MCP server URL/key pattern only if the tool supports compatible MCP configuration. Ask the AI tool to adjust the workflow accordingly. |
 
 ## Public Safety

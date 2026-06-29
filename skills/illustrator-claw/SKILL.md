@@ -4,12 +4,12 @@ description: >
   Use when automating Adobe Illustrator (Beta) tasks through an AI agent —
   including recoloring artwork, running artboard audits, checking linked
   assets, exporting, aligning objects, or looking up Illustrator menu command
-  values. Also use for connecting Codex, Claude Code, or Cursor to the
-  Illustrator MCP server, setting up an Illustrator Claw workspace with this
-  repo, or editing this public repo without leaking credentials or private
-  paths. Applies even when the user does not mention "Illustrator Claw" or
-  "MCP" — use whenever someone wants an AI agent to inspect, modify, or
-  automate work in Illustrator (Beta).
+  values. Also use for connecting Claude Code, Codex, Cursor, or any other
+  MCP-capable AI tool to the Illustrator MCP server, setting up an Illustrator
+  Claw workspace with this repo, or editing this public repo without leaking
+  credentials or private paths. Applies even when the user does not mention
+  "Illustrator Claw" or "MCP" — use whenever someone wants an AI agent to
+  inspect, modify, or automate work in Illustrator (Beta).
 ---
 
 # Illustrator Claw
