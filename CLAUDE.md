@@ -7,8 +7,8 @@ This file describes the repository for AI assistants working in this codebase.
 Public notes and examples for using Adobe Illustrator MCP server tools with
 AI-assisted automation workflows. The primary automation pattern is AI-driven
 Illustrator control (recoloring, layout, export) through the Adobe MCP server,
-with orchestration handled through Codex or a compatible Illustrator Claw agent
-runner.
+with orchestration handled through any MCP-capable AI assistant (Claude, Codex,
+Cursor, or a compatible Illustrator Claw agent runner).
 
 This depends on Adobe Illustrator (Beta) and its MCP server feature.
 

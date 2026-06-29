@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 240" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="How it works: you ask the AI tool, the AI tool talks to Illustrator through the MCP connection, Illustrator changes your artwork.">
+  <rect width="920" height="240" fill="#ffffff"/>
+  <text x="460" y="34" text-anchor="middle" font-size="15" fill="#888">Illustration — how the pieces connect</text>
+
+  <!-- You -->
+  <g>
+    <rect x="30" y="70" width="170" height="100" rx="14" fill="#F4F1FB" stroke="#7A5FCE" stroke-width="2"/>
+    <text x="115" y="112" text-anchor="middle" font-size="20" font-weight="700" fill="#3D2C66">You</text>
+    <text x="115" y="138" text-anchor="middle" font-size="13" fill="#5A4A82">Type what you want</text>
+    <text x="115" y="156" text-anchor="middle" font-size="13" fill="#5A4A82">in plain language</text>
+  </g>
+
+  <!-- AI tool -->
+  <g>
+    <rect x="250" y="70" width="190" height="100" rx="14" fill="#EAF3FB" stroke="#2E7BD6" stroke-width="2"/>
+    <text x="345" y="106" text-anchor="middle" font-size="19" font-weight="700" fill="#1B4C84">AI tool</text>
+    <text x="345" y="130" text-anchor="middle" font-size="13" fill="#27598F">Claude · Codex · Cursor</text>
+    <text x="345" y="150" text-anchor="middle" font-size="13" fill="#27598F">turns words into actions</text>
+  </g>
+
+  <!-- MCP -->
+  <g>
+    <rect x="490" y="70" width="170" height="100" rx="14" fill="#FBF3E8" stroke="#D6912E" stroke-width="2"/>
+    <text x="575" y="106" text-anchor="middle" font-size="19" font-weight="700" fill="#8A5A11">MCP</text>
+    <text x="575" y="130" text-anchor="middle" font-size="13" fill="#9A6A1E">the secure</text>
+    <text x="575" y="150" text-anchor="middle" font-size="13" fill="#9A6A1E">connection</text>
+  </g>
+
+  <!-- Illustrator -->
+  <g>
+    <rect x="710" y="70" width="180" height="100" rx="14" fill="#F7ECEC" stroke="#C0392B" stroke-width="2"/>
+    <text x="800" y="106" text-anchor="middle" font-size="18" font-weight="700" fill="#8C2018">Illustrator</text>
+    <text x="800" y="130" text-anchor="middle" font-size="13" fill="#A03228">(Beta) changes</text>
+    <text x="800" y="150" text-anchor="middle" font-size="13" fill="#A03228">your artwork</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#9aa0a6" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <line x1="202" y1="120" x2="246" y2="120"/>
+    <line x1="442" y1="120" x2="486" y2="120"/>
+    <line x1="662" y1="120" x2="706" y2="120"/>
+  </g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <text x="460" y="214" text-anchor="middle" font-size="13" fill="#777">You never touch code — you just describe the result you want.</text>
+</svg>
