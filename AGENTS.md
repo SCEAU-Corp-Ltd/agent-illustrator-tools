@@ -13,10 +13,9 @@ dependency.
 
 Services / scripts and how to exercise them:
 
-- Syntax "lint": `python3 -m py_compile tools/build-menu-command-links.py tools/listener-playground/listener.py tools/ollama-vision/ollama_vision.py`. This is the only build/lint gate.
+- Syntax "lint": `python3 -m py_compile tools/build-menu-command-links.py tools/listener-playground/listener.py`. This is the only build/lint gate.
 - Generated doc: `docs/illustrator-menu-command-links.md` is produced from `data/illustrator-menu-commands.csv` by `python3 tools/build-menu-command-links.py`. Never hand-edit it; regenerate and confirm `git status` is clean (the generator is idempotent).
 - Listener service (`tools/listener-playground/listener.py`): a runnable local HTTP server. Start with `python3 tools/listener-playground/listener.py --host 127.0.0.1 --port 8765`. Keep it bound to `127.0.0.1`. The repo docs use PowerShell (`Invoke-RestMethod`); on this Linux VM use `curl` instead, e.g. `curl -s http://127.0.0.1:8765/health` and `curl -s -X POST http://127.0.0.1:8765/test/x -H 'Content-Type: application/json' -d '{"m":"hi"}'`, then `curl -s http://127.0.0.1:8765/events/latest`. Captured events go to `.tmp/listener-events.jsonl` (gitignored).
-- `tools/ollama-vision/ollama_vision.py` requires a running local **Ollama** server (not installed here) and a pulled vision model; it cannot be fully exercised without that external service. Import/CLI arg-parsing still works offline.
 
 The Adobe Illustrator MCP workflows described in `CLAUDE.md` require Adobe
 Illustrator (Beta) with its MCP server — that desktop app is not present in this

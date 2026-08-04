@@ -67,19 +67,6 @@ Example operation plan:
 - Use `Export` with `overwrite=false` unless the user explicitly approves
   overwriting an existing file.
 
-## Optional — Local Vision QA (Ollama)
-
-After you have a **PNG** from `CapturePreview`, `Export`, or another MCP path,
-you can run a **local** vision model for a second opinion (no cloud upload):
-
-1. Install [Ollama](https://ollama.com), pull a vision tag (`ollama pull llava` or similar).
-2. Save the preview outside this repo if it is not public ([`docs/public-boundary.md`](../docs/public-boundary.md)).
-3. Follow **`design-qa-with-ollama.md`** in this folder — same loop as human QA:
-   export → `tools/ollama-vision/ollama_vision.py` → fix in Illustrator → repeat.
-   For **Qwen or Gemma** model choice and env, use **`ollama-qwen-gemma-vision.md`**.
-
-Treat model output as advisory; spot colors and brand fidelity still need spec checks.
-
 ## Symbol Content Recolor
 
 When the target art is inside a symbol instance, `GetObjectStructure` returns

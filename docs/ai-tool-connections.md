@@ -8,8 +8,6 @@ Connect your assistant to the Adobe MCP server, then follow the same tool
 sequence regardless of which AI tool you use. Per-tool notes are in the table
 below.
 
-For **offline visual QA** of MCP-exported PNGs (optional), use a local Ollama vision model and `workflows/design-qa-with-ollama.md` — independent of which MCP client you use. For **Qwen2.5-VL or Gemma 3** tags and presets, see `workflows/ollama-qwen-gemma-vision.md`.
-
 ## Adobe for creativity in Claude (recent update)
 
 Adobe now provides an **Adobe for creativity** connector that runs inside Claude and exposes a broader creative toolset across multiple Adobe apps.
