@@ -13,7 +13,7 @@
     .rule    { stroke: #0f0f0f; stroke-width: 1.5; }
     .div     { stroke: #e0e0e0; stroke-width: 1; }
     .row     { stroke: #f0f0f0; stroke-width: 1; }
-    .box     { fill: #f8f8f8; stroke: #e0e0e0; stroke-width: 1; }
+    .box     { fill: #ffffff; stroke: #d8d8d4; stroke-width: 1; }
     .check   { stroke: #0f0f0f; stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
     .cbox    { fill: none; stroke: #0f0f0f; stroke-width: 1.2; }
 
@@ -35,7 +35,7 @@
   </style>
 
   <!-- card: keeps the black ink legible on dark backgrounds -->
-  <rect x="0.5" y="0.5" width="799" height="407" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="799" height="407" fill="#f4f4f2" stroke="#dcdcd8" stroke-width="1"/>
 
   <line class="rule" x1="32" y1="16" x2="768" y2="16"/>
 

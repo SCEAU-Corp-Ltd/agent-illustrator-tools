@@ -13,7 +13,7 @@ own screenshots.
 These are original illustrations, not screenshots — modelled on the real panel
 with the bearer tokens redacted. They render directly on GitHub.
 
-Both are drawn on an opaque white card so the near-black type stays readable in
+Both are drawn on an opaque light-gray card so the near-black type stays readable in
 GitHub's dark theme, and both carry small CSS animations (a pulse travelling
 down the pipeline, ticks drawing in, masked tokens shimmering). GitHub loads
 them through an `<img>` tag, so declarative CSS animation runs but scripting

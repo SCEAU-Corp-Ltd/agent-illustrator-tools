@@ -46,7 +46,7 @@
   </style>
 
   <!-- card: keeps the black ink legible on dark backgrounds -->
-  <rect x="0.5" y="0.5" width="799" height="151" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="799" height="151" fill="#f4f4f2" stroke="#dcdcd8" stroke-width="1"/>
 
   <line class="rule" x1="32" y1="16" x2="768" y2="16"/>
 
