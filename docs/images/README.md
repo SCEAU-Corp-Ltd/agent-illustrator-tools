@@ -8,10 +8,16 @@ own screenshots.
 | File | Used by | What it shows |
 |---|---|---|
 | `how-it-works.svg` | `docs/non-developer-start-here.md` | You → AI tool → MCP → Illustrator |
-| `mcp-tools-panel.svg` | `docs/non-developer-start-here.md` | The **Preferences › MCP & Tools** panel, tokens masked |
+| `mcp-tools-panel.svg` | `docs/non-developer-start-here.md` | The **Preferences › MCP & Tools** panel — Cursor, Claude Code, Codex and Others rows, tokens masked |
 
 These are original illustrations, not screenshots — modelled on the real panel
 with the bearer tokens redacted. They render directly on GitHub.
+
+Both are drawn on an opaque white card so the near-black type stays readable in
+GitHub's dark theme, and both carry small CSS animations (a pulse travelling
+down the pipeline, ticks drawing in, masked tokens shimmering). GitHub loads
+them through an `<img>` tag, so declarative CSS animation runs but scripting
+does not — keep them script-free. Both honour `prefers-reduced-motion`.
 
 ## Adobe's official screenshots — link, don't copy
 

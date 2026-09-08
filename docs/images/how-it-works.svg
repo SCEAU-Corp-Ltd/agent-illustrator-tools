@@ -1,45 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 130" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 152" width="800" height="152" role="img" aria-labelledby="hiw-title hiw-desc" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title id="hiw-title">How it works</title>
+  <desc id="hiw-desc">Four steps: you describe the change, an AI assistant turns it into actions, MCP carries them, Illustrator makes the change.</desc>
 
-  <!-- top rule -->
-  <line x1="0" y1="0" x2="800" y2="0" stroke="#0f0f0f" stroke-width="1.5"/>
+  <style>
+    .num   { font-size: 9px; letter-spacing: 2px; fill: #9a9a9a; }
+    .title { font-size: 18px; font-weight: 600; fill: #0f0f0f; }
+    .body  { font-size: 11px; fill: #555555; }
+    .rule  { stroke: #0f0f0f; stroke-width: 1.5; }
+    .arrow { stroke: #0f0f0f; stroke-width: 1; }
+    .head  { fill: #0f0f0f; }
 
-  <!-- step 01 -->
-  <text x="0" y="28" font-size="9" letter-spacing="2" fill="#999">01</text>
-  <text x="0" y="54" font-size="18" font-weight="600" fill="#0f0f0f">You</text>
-  <text x="0" y="72" font-size="11" fill="#555">Type what you want,</text>
-  <text x="0" y="87" font-size="11" fill="#555">in plain language</text>
+    /* Pulse travelling down the pipeline, one step at a time. */
+    @keyframes step-pulse {
+      0%, 8%    { fill: #ff9a00; }
+      22%, 100% { fill: #9a9a9a; }
+    }
+    @keyframes arrow-flow {
+      0%   { stroke-dashoffset: 24; opacity: .35; }
+      50%  { opacity: 1; }
+      100% { stroke-dashoffset: 0;  opacity: .35; }
+    }
+    @keyframes track-sweep {
+      0%   { transform: translateX(0);    opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { transform: translateX(704px); opacity: 0; }
+    }
 
-  <!-- arrow 1 -->
-  <line x1="148" y1="52" x2="218" y2="52" stroke="#0f0f0f" stroke-width="1"/>
-  <polygon points="218,48 228,52 218,56" fill="#0f0f0f"/>
+    .num                { animation: step-pulse 4.8s linear infinite; }
+    .s2 .num            { animation-delay: 1.2s; }
+    .s3 .num            { animation-delay: 2.4s; }
+    .s4 .num            { animation-delay: 3.6s; }
 
-  <!-- step 02 -->
-  <text x="238" y="28" font-size="9" letter-spacing="2" fill="#999">02</text>
-  <text x="238" y="54" font-size="18" font-weight="600" fill="#0f0f0f">AI assistant</text>
-  <text x="238" y="72" font-size="11" fill="#555">Claude · Codex · Cursor</text>
-  <text x="238" y="87" font-size="11" fill="#555">turns words into actions</text>
+    .arrow              { stroke-dasharray: 4 4; animation: arrow-flow 1.2s linear infinite; }
+    .a2                 { animation-delay: 1.2s; }
+    .a3                 { animation-delay: 2.4s; }
 
-  <!-- arrow 2 -->
-  <line x1="430" y1="52" x2="500" y2="52" stroke="#0f0f0f" stroke-width="1"/>
-  <polygon points="500,48 510,52 500,56" fill="#0f0f0f"/>
+    .sweep              { animation: track-sweep 4.8s linear infinite; }
 
-  <!-- step 03 -->
-  <text x="520" y="28" font-size="9" letter-spacing="2" fill="#999">03</text>
-  <text x="520" y="54" font-size="18" font-weight="600" fill="#0f0f0f">MCP</text>
-  <text x="520" y="72" font-size="11" fill="#555">Adobe's secure</text>
-  <text x="520" y="87" font-size="11" fill="#555">connection layer</text>
+    @media (prefers-reduced-motion: reduce) {
+      .num, .arrow, .sweep { animation: none; }
+      .arrow { stroke-dasharray: none; opacity: 1; }
+      .sweep { opacity: 0; }
+    }
+  </style>
 
-  <!-- arrow 3 -->
-  <line x1="628" y1="52" x2="698" y2="52" stroke="#0f0f0f" stroke-width="1"/>
-  <polygon points="698,48 708,52 698,56" fill="#0f0f0f"/>
+  <!-- card: keeps the black ink legible on dark backgrounds -->
+  <rect x="0.5" y="0.5" width="799" height="151" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
 
-  <!-- step 04 -->
-  <text x="718" y="28" font-size="9" letter-spacing="2" fill="#999">04</text>
-  <text x="718" y="54" font-size="18" font-weight="600" fill="#0f0f0f">Illustrator</text>
-  <text x="718" y="72" font-size="11" fill="#555">makes the</text>
-  <text x="718" y="87" font-size="11" fill="#555">change</text>
+  <line class="rule" x1="32" y1="16" x2="768" y2="16"/>
 
-  <!-- bottom rule -->
-  <line x1="0" y1="115" x2="800" y2="115" stroke="#0f0f0f" stroke-width="1.5"/>
+  <g class="s1">
+    <text class="num"   x="32" y="42">01</text>
+    <text class="title" x="32" y="68">You</text>
+    <text class="body"  x="32" y="88">Type what you want,</text>
+    <text class="body"  x="32" y="104">in plain language</text>
+  </g>
+  <g>
+    <line class="arrow a1" x1="184" y1="66" x2="204" y2="66"/>
+    <polygon class="head" points="204,62 214,66 204,70"/>
+  </g>
 
+  <g class="s2">
+    <text class="num"   x="226" y="42">02</text>
+    <text class="title" x="226" y="68">AI assistant</text>
+    <text class="body"  x="226" y="88">Claude · Codex · Cursor</text>
+    <text class="body"  x="226" y="104">turns words into actions</text>
+  </g>
+  <g>
+    <line class="arrow a2" x1="378" y1="66" x2="398" y2="66"/>
+    <polygon class="head" points="398,62 408,66 398,70"/>
+  </g>
+
+  <g class="s3">
+    <text class="num"   x="420" y="42">03</text>
+    <text class="title" x="420" y="68">MCP</text>
+    <text class="body"  x="420" y="88">Adobe's secure</text>
+    <text class="body"  x="420" y="104">connection layer</text>
+  </g>
+  <g>
+    <line class="arrow a3" x1="572" y1="66" x2="592" y2="66"/>
+    <polygon class="head" points="592,62 602,66 592,70"/>
+  </g>
+
+  <g class="s4">
+    <text class="num"   x="614" y="42">04</text>
+    <text class="title" x="614" y="68">Illustrator</text>
+    <text class="body"  x="614" y="88">makes the</text>
+    <text class="body"  x="614" y="104">change</text>
+  </g>
+
+  <line class="rule" x1="32" y1="130" x2="768" y2="130"/>
+  <rect class="sweep" x="32" y="128.5" width="64" height="3" fill="#ff9a00"/>
 </svg>

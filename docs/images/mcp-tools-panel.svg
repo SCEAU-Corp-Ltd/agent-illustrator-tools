@@ -1,58 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 408" width="800" height="408" role="img" aria-labelledby="mcp-title mcp-desc" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title id="mcp-title">Illustrator (Beta) — Preferences › MCP &amp; Tools</title>
+  <desc id="mcp-desc">The MCP and Tools preferences panel: Enable MCP server ticked, and Connect rows for Cursor, Claude Code, Codex and Others, with the bearer tokens masked.</desc>
 
-  <!-- top rule -->
-  <line x1="0" y1="0" x2="800" y2="0" stroke="#0f0f0f" stroke-width="1.5"/>
+  <style>
+    .eyebrow { font-size: 9px; letter-spacing: 2px; fill: #9a9a9a; }
+    .h1      { font-size: 22px; font-weight: 600; fill: #0f0f0f; }
+    .label   { font-size: 13px; font-weight: 500; fill: #0f0f0f; }
+    .opt     { font-size: 13px; fill: #0f0f0f; }
+    .btn     { font-size: 12px; fill: #0f0f0f; }
+    .code    { font-size: 11px; fill: #8a8a8a;
+               font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+    .rule    { stroke: #0f0f0f; stroke-width: 1.5; }
+    .div     { stroke: #e0e0e0; stroke-width: 1; }
+    .row     { stroke: #f0f0f0; stroke-width: 1; }
+    .box     { fill: #f8f8f8; stroke: #e0e0e0; stroke-width: 1; }
+    .check   { stroke: #0f0f0f; stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .cbox    { fill: none; stroke: #0f0f0f; stroke-width: 1.2; }
 
-  <!-- heading -->
-  <text x="0" y="34" font-size="9" letter-spacing="2" fill="#999">ILLUSTRATOR (BETA) — PREFERENCES</text>
-  <text x="0" y="62" font-size="22" font-weight="600" fill="#0f0f0f">MCP &amp; Tools</text>
+    /* Ticks draw themselves in, then the masked tokens shimmer. */
+    @keyframes draw   { 0% { stroke-dashoffset: 20; } 35%, 100% { stroke-dashoffset: 0; } }
+    @keyframes shimmer{ 0%, 100% { fill: #c9c9c9; } 50% { fill: #8a8a8a; } }
+    @keyframes ring   { 0%, 70%, 100% { stroke: #0f0f0f; } 80% { stroke: #ff9a00; } }
 
-  <!-- divider -->
-  <line x1="0" y1="80" x2="800" y2="80" stroke="#e0e0e0" stroke-width="1"/>
+    .check   { stroke-dasharray: 20; animation: draw 4s ease-out infinite; }
+    .check2  { animation-delay: .35s; }
+    .mask    { animation: shimmer 4s ease-in-out infinite; }
+    .mask2   { animation-delay: .6s; }
+    .connect { animation: ring 4s ease-in-out infinite; }
 
-  <!-- checkboxes -->
-  <rect x="0" y="98" width="12" height="12" rx="2" fill="none" stroke="#0f0f0f" stroke-width="1.2"/>
-  <line x1="2" y1="104" x2="5" y2="108" stroke="#0f0f0f" stroke-width="1.2"/>
-  <line x1="5" y1="108" x2="11" y2="100" stroke="#0f0f0f" stroke-width="1.2"/>
-  <text x="22" y="110" font-size="13" fill="#0f0f0f">Enable MCP server</text>
+    @media (prefers-reduced-motion: reduce) {
+      .check, .mask, .connect { animation: none; }
+      .check { stroke-dashoffset: 0; }
+    }
+  </style>
 
-  <rect x="0" y="122" width="12" height="12" rx="2" fill="none" stroke="#0f0f0f" stroke-width="1.2"/>
-  <line x1="2" y1="128" x2="5" y2="132" stroke="#0f0f0f" stroke-width="1.2"/>
-  <line x1="5" y1="132" x2="11" y2="124" stroke="#0f0f0f" stroke-width="1.2"/>
-  <text x="22" y="134" font-size="13" fill="#0f0f0f">Show MCP &amp; Tools status on application header</text>
+  <!-- card: keeps the black ink legible on dark backgrounds -->
+  <rect x="0.5" y="0.5" width="799" height="407" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
 
-  <!-- divider -->
-  <line x1="0" y1="154" x2="800" y2="154" stroke="#e0e0e0" stroke-width="1"/>
+  <line class="rule" x1="32" y1="16" x2="768" y2="16"/>
 
-  <text x="0" y="176" font-size="9" letter-spacing="2" fill="#999">CONNECT TO EXTERNAL TOOLS</text>
+  <text class="eyebrow" x="32" y="44">ILLUSTRATOR (BETA) — PREFERENCES</text>
+  <text class="h1"      x="32" y="74">MCP &amp; Tools</text>
+  <line class="div" x1="32" y1="94" x2="768" y2="94"/>
 
-  <!-- rows -->
+  <!-- options -->
+  <rect class="cbox" x="32" y="110" width="12" height="12" rx="2"/>
+  <path class="check" d="M34.5 116.5 L37.5 120 L43 111.5"/>
+  <text class="opt" x="54" y="121">Enable MCP server</text>
+
+  <rect class="cbox" x="32" y="134" width="12" height="12" rx="2"/>
+  <path class="check check2" d="M34.5 140.5 L37.5 144 L43 135.5"/>
+  <text class="opt" x="54" y="145">Show MCP &amp; Tools status on application header</text>
+
+  <line class="div" x1="32" y1="166" x2="768" y2="166"/>
+  <text class="eyebrow" x="32" y="188">CONNECT TO EXTERNAL TOOLS</text>
 
   <!-- Cursor -->
-  <text x="0" y="210" font-size="13" font-weight="500" fill="#0f0f0f">Cursor</text>
-  <rect x="160" y="195" width="80" height="24" rx="4" fill="none" stroke="#0f0f0f" stroke-width="1"/>
-  <text x="200" y="212" text-anchor="middle" font-size="12" fill="#0f0f0f">Connect</text>
-
-  <!-- divider -->
-  <line x1="0" y1="228" x2="800" y2="228" stroke="#f0f0f0" stroke-width="1"/>
+  <text class="label" x="32" y="218">Cursor</text>
+  <rect class="connect" x="200" y="202" width="80" height="24" rx="4" fill="none" stroke-width="1"/>
+  <text class="btn" x="240" y="219" text-anchor="middle">Connect</text>
+  <line class="row" x1="32" y1="238" x2="768" y2="238"/>
 
   <!-- Claude Code -->
-  <text x="0" y="252" font-size="13" font-weight="500" fill="#0f0f0f">Claude Code</text>
-  <rect x="160" y="237" width="560" height="24" rx="4" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="1"/>
-  <text x="176" y="254" font-size="11" fill="#999">claude mcp add --transport http --header "Authorization: Bearer  ████████████████</text>
-
-  <!-- divider -->
-  <line x1="0" y1="272" x2="800" y2="272" stroke="#f0f0f0" stroke-width="1"/>
+  <text class="label" x="32" y="262">Claude Code</text>
+  <rect class="box" x="200" y="246" width="568" height="24" rx="4"/>
+  <text class="code" x="212" y="262">claude mcp add --transport http --header "Authorization: Bearer <tspan class="mask">████████</tspan>"</text>
+  <line class="row" x1="32" y1="282" x2="768" y2="282"/>
 
   <!-- Codex -->
-  <text x="0" y="296" font-size="13" font-weight="500" fill="#0f0f0f">Codex</text>
-  <rect x="160" y="281" width="560" height="24" rx="4" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="1"/>
-  <text x="176" y="298" font-size="11" fill="#999">export ADOBE_ILLUSTRATOR_MCP_BEARER_TOKEN=████████████████████████</text>
+  <text class="label" x="32" y="306">Codex</text>
+  <rect class="box" x="200" y="290" width="568" height="24" rx="4"/>
+  <text class="code" x="212" y="306">export ADOBE_ILLUSTRATOR_MCP_BEARER_TOKEN=<tspan class="mask mask2">████████████</tspan></text>
+  <line class="row" x1="32" y1="326" x2="768" y2="326"/>
 
-  <!-- bottom rule -->
-  <line x1="0" y1="325" x2="800" y2="325" stroke="#0f0f0f" stroke-width="1.5"/>
+  <!-- Others -->
+  <text class="label" x="32" y="350">Others</text>
+  <rect x="200" y="334" width="80" height="24" rx="4" fill="none" stroke="#0f0f0f" stroke-width="1"/>
+  <text class="btn" x="240" y="351" text-anchor="middle">Copy URL</text>
+  <rect x="292" y="334" width="80" height="24" rx="4" fill="none" stroke="#0f0f0f" stroke-width="1"/>
+  <text class="btn" x="332" y="351" text-anchor="middle">Copy key</text>
 
-  <!-- caption -->
-  <text x="0" y="340" font-size="9" letter-spacing="1" fill="#999">TOKEN FIELDS ARE PRIVATE — NEVER SHARE OR COMMIT THEM</text>
-
+  <line class="rule" x1="32" y1="376" x2="768" y2="376"/>
+  <text class="eyebrow" x="32" y="396" letter-spacing="1">TOKEN FIELDS ARE PRIVATE — NEVER SHARE OR COMMIT THEM</text>
 </svg>
